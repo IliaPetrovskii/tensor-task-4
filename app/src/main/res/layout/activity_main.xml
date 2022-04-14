@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="729dp"
+        android:background="#878282"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/contactsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#A59F9F"
+            android:text="@string/textview2"
+            android:textColor="#263238"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contacts" />
+
+        <TextView
+            android:id="@+id/contacts"
+            android:layout_width="369dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/contacts"
+            android:textAlignment="center"
+            android:textColor="#263238"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/contactsList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/achievementsList" />
+
+        <TextView
+            android:id="@+id/achievementsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="#B1A8A8"
+            android:text="@string/textview"
+            android:textColor="#4E342E"
+            app:layout_constraintBottom_toTopOf="@+id/contacts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workerAchievements" />
+
+        <ImageView
+            android:id="@+id/workerPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="383dp"
+            android:contentDescription="@string/image_of_worker"
+            android:src="@drawable/pinochet"
+            app:layout_constraintBottom_toTopOf="@+id/workerFIO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/workerAchievements"
+            android:layout_width="374dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/achievement_string"
+            android:textAlignment="center"
+            android:textColor="#263238"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/achievementsList"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workerPost" />
+
+        <TextView
+            android:id="@+id/workerPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="3dp"
+            android:text="@string/post"
+            android:textAlignment="center"
+            android:textColor="#263238"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/workerAchievements"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workerExperience" />
+
+        <TextView
+            android:id="@+id/workerExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/experience"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/workerPost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workerFIO" />
+
+        <TextView
+            android:id="@+id/workerFIO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:background="#EFD1D1"
+            android:text="@string/fio"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/workerExperience"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workerPhoto" />
+
+        <ImageButton
+            android:id="@+id/callButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/call_button"
+            app:layout_constraintBottom_toTopOf="@+id/workerFIO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.904"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/workerPhoto"
+            app:layout_constraintVertical_bias="0.112"
+            app:srcCompat="@android:drawable/ic_menu_call"
+            tools:ignore="RedundantDescriptionCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
